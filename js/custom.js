@@ -1,5 +1,5 @@
+// Faq Accordians
 let question = document.querySelectorAll(".question");
-
 question.forEach(question => {
   question.addEventListener("click", event => {
     const active = document.querySelector(".question.active");

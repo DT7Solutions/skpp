@@ -44,7 +44,7 @@
         <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
             <div class="container">
                 <!-- Logo container-->
-                <a class="logo text-primary" href="javascript:void(0)">SEKHARSPEAKS</a>
+                <a class="logo text-primary" href="#">SEKHARSPEAKS</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" 
                     aria-label="Toggle navigation">
@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <!-- Client Start -->
+        <!-- Count Start -->
         <section class="section fan-fact" style="background-image:url('images/bg-pattern.png')"  id="about">
             <div class="container">
                 <div class="row" id="counter">
@@ -139,9 +139,10 @@
                 </div><!--end row-->
             </div><!--end container-->
         </section>
-        <!-- End Section Client -->
+        <!-- Count End-->
 
-        <section class="bg-light pt-5">
+        <!-- About Start -->
+        <section class="bg-light pt-5 about">
             <div class="container">
                 <div class="row">
                     <div class="offset-lg-1 col-lg-10 offset-lg-1">
@@ -168,7 +169,8 @@
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
-        </section><!--end section -->
+        </section>
+        <!--About End -->
 
         <!-- Service Start -->
         <section class="section bg-light" id="services">
@@ -181,16 +183,11 @@
                                 <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">
                                     Proficient in coaching for business and personal success, empowering clients with effective strategies and mentorship.
                                 </p>
-                                <span></span>
                             </div>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
-
-                <div class="row">
-
-
-                    
+                <div class="row justify-content-center">                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="feature-widget text-left rounded" data-aos="fade-up">
                             <div class="services-icon text-primary mb-3">
@@ -198,12 +195,11 @@
                             </div>
                             <div class="services-texts">
                                 <h3 class="title mb-3">Business Coach</h3>
-                                <p class="text-light-muted mb-4">With lots of unique blocks, you can easily build a page without coding.</p>
-                                <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a>
+                                <p class="text-light-muted mb-4">Provides personalized coaching to entrepreneurs and business leaders, focusing on strategic growth and leadership development.</p>
+                                <a href="#" class="text-primary" data-toggle="modal" data-target="#businessCoachModal">Read more <i class="mdi mdi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="feature-widget text-left rounded" data-aos="fade-up">
                             <div class="services-icon text-primary mb-3">
@@ -211,12 +207,11 @@
                             </div>
                             <div class="services-texts">
                                 <h3 class="title mb-3">Action Coach</h3>
-                                <p class="text-light-muted mb-4">With lots of unique blocks, you can easily build a page without coding.</p>
-                                <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a>
+                                <p class="text-light-muted mb-4">Specializes in motivating individuals and teams to achieve their goals through actionable strategies and continuous improvement.</p>
+                                <a href="#" class="text-primary" data-toggle="modal" data-target="#actionCoachModal">Read more <i class="mdi mdi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="feature-widget text-left rounded" data-aos="fade-up">
                             <div class="services-icon text-primary mb-3">
@@ -224,38 +219,90 @@
                             </div>
                             <div class="services-texts">
                                 <h3 class="title mb-3">Life Coach</h3>
-                                <p class="text-light-muted mb-4">With lots of unique blocks, you can easily build a page without coding.</p>
-                                <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a>
+                                <p class="text-light-muted mb-4">Empowers individuals to achieve personal fulfillment and balance through guidance on career, relationships, and personal growth.</p>
+                                <a href="#" class="text-primary" data-toggle="modal" data-target="#lifeCoachModal">Read more <i class="mdi mdi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
-
                 </div><!-- end row -->
-  
-  
-  
+            </div>
+            <!-- Service Modals One -->
+            <div class="modal fade" id="businessCoachModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img src="https://via.placeholder.com/800x600" alt="Business Coach Image" class="img-fluid mb-4" style="width: 100%;">
+                            <h3 class="title mb-3">Business Coach</h3>
+                            <p class="text-justify">
+                                Provides personalized coaching to entrepreneurs and business leaders, focusing on strategic growth and leadership development. 
+                                Here you can add more detailed information about the Business Coach services. This area is ideal for expanding on the service 
+                                details, ensuring the client understands the full value of the offering.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service Modals Two -->
+            <div class="modal fade" id="actionCoachModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img src="https://via.placeholder.com/800x600" alt="Action Coach Image" class="img-fluid mb-4" style="width: 100%;">
+                            <h3 class="title mb-3">Action Coach</h3>
+                            <p class="text-justify">
+                                Specializes in motivating individuals and teams to achieve their goals through actionable strategies and continuous 
+                                improvement. Here you can add more detailed information about the Action Coach services. This area is ideal for 
+                                expanding on the service details, ensuring the client understands the full value of the offering.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service Modals Three -->
+            <div class="modal fade" id="lifeCoachModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img src="https://via.placeholder.com/800x600" alt="Life Coach Image" class="img-fluid mb-4" style="width: 100%;">
+                            <h3 class="title mb-3">Life Coach</h3>
+                            <p class="text-justify">
+                                Empowers individuals to achieve personal fulfillment and balance through guidance on career, relationships, and 
+                                personal growth. Here you can add more detailed information about the Life Coach services. This area is ideal for 
+                                expanding on the service details, ensuring the client understands the full value of the offering.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- End Start -->
+        <!-- Service End-->
 
-        <!-- Start Section -->
+        <!-- Journey Start -->
         <section class="section" id="journey">
             <div class="container">
-
                 <div class="row justify-content-center align-items-center">
                     <div class="col-lg-12 text-center">
                         <div class="work-content mt-4" data-aos="fade-up">
-                            <h2 class="text-capitalize">Work  Participation</h2>
-                            <p class="mb-0 text-light-muted">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
-                            <a href="#" class="btn btn btn-primary rounded mt-4 pt-2">See More <i class="mdi mdi-chevron-right"></i></a>
+                            <h2 class="title text-capitalize mb-4">Work  Participation</h2>
+                            <p class="pera-title para-desc-600 text-light-muted mb-4 mx-auto">
+                                Experienced coach specializing in guiding individuals and businesses to success through effective mentoring and leadership.
+                            </p>
                         </div>
                     </div>
-
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="main-timeline" data-aos="fade-up">
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                            <div class="main-timeline">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-tanda-krishna-agencis-65x65.png" alt="">
                                         </div>
@@ -266,10 +313,10 @@
                                             <strong>Tandava Krishna Agencies</strong> (<em>TK Agencies</em>), founded in 1990 in Vijayawada, is a leading supplier 
                                             of electric PVC pipes, tiles, sanitaryware, and building materials, featuring top brands like Finolex, Kajaria, and Cera.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-BNI-guntur-65x65.png" alt="">
                                         </div>
@@ -281,10 +328,10 @@
                                             generating $20.01 billion USD revenue through 14 million referrals, offering training and networking opportunities 
                                             to boost business in the <em>BNI Guntur</em> region.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-BNI-guntur-65x65.png" alt="">
                                         </div>
@@ -296,11 +343,10 @@
                                             generating $20.01 billion USD revenue through 14 million referrals, offering training and networking opportunities 
                                             to boost business in the <em>BNI Guntur</em> region.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-sikhara-nirmaan-65x65.png" alt="">
                                         </div>
@@ -312,10 +358,10 @@
                                             offering services in building design, construction, and project management, prioritizing innovation and quality to meet 
                                             client expectations.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-action-coach-65x65.png" alt="">
                                         </div>
@@ -327,10 +373,10 @@
                                             franchise, renowned for innovation and leadership in the industry, setting unmatched standards in business 
                                             coaching excellence for over two decades.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-sikhara-wealth-saviors-65x65.png" alt="">
                                         </div>
@@ -342,10 +388,10 @@
                                             planning, providing personalized guidance to individuals and businesses for retirement, growth, and 
                                             wealth preservation across generations.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-sarayu-eco-solutions-65x65.png" alt="">
                                         </div>
@@ -357,10 +403,10 @@
                                             Water sector. Founded on January 8, 2020, the company focuses on innovative solutions in energy and water 
                                             management, emphasizing sustainability and community development.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="timeline mt-4">
-                                    <a href="#" class="timeline-content">
+                                <div class="timeline mt-4" data-aos="fade-up">
+                                    <div class="timeline-content">
                                         <div class="timeline-icon text-primary">
                                             <img src="images/journey/sekharspeaks-rotary-midtown-vijayawada-65x65.png" alt="">
                                         </div>
@@ -372,14 +418,53 @@
                                             humanitarian projects such as health camps, education, & environmental sustainability. They aim to positively
                                             impact their community & the world through collaborative efforts & dedicated service.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!-- end container -->
-        </section><!-- end section -->
+        </section>
+        <!-- Journey End -->
+
+        <!-- Our Partner Start -->
+        <section class="section" id="partners">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="container-title text-center mb-4 pb-2" data-aos="fade-up">
+                            <div class="titles">
+                                <h2 class="title text-capitalize mb-4">Our Enterprises</h2>
+                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">
+                                    Collaborating with industry leaders to deliver exceptional business coaching and innovative solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--end col-->                    
+                </div><!--end row-->
+
+                <div class="our-partners">
+                    <div class="partners-items">
+                        <img src="images/client/sekharspeaks-tanda-krishna-agencis-148x140.png" alt="Tandava Krishna Agencies">
+                        <img src="images/client/sekharspeaks-BNI-guntur-148x140.png" alt="BNI Guntur">
+                        <img src="images/client/sekharspeaks-sikhara-nirmaan-148x140.png" alt="BNI Guntur">
+                        <img src="images/client/sekharspeaks-action-coach-148x140.png" alt="Action Coach">
+                        <img src="images/client/sekharspeaks-sikhara-wealth-saviors-148x140.png" alt="Sikhara Wealth Saviors">
+                        <img src="images/client/sekharspeaks-sarayu-eco-solutions-148x140.png" alt="Sarayu Eco Solutions">
+                        <img src="images/client/sekharspeaks-rotary-midtown-vijayawada-148x140.png" alt="Rotary Club of Vijayawada">
+                        <img src="images/client/sekharspeaks-tanda-krishna-agencis-148x140.png" alt="Tandava Krishna Agencies">
+                        <img src="images/client/sekharspeaks-BNI-guntur-148x140.png" alt="BNI Guntur">
+                        <img src="images/client/sekharspeaks-sikhara-nirmaan-148x140.png" alt="BNI Guntur">
+                        <img src="images/client/sekharspeaks-action-coach-148x140.png" alt="Action Coach">
+                        <img src="images/client/sekharspeaks-sikhara-wealth-saviors-148x140.png" alt="Sikhara Wealth Saviors">
+                        <img src="images/client/sekharspeaks-sarayu-eco-solutions-148x140.png" alt="Sarayu Eco Solutions">
+                        <img src="images/client/sekharspeaks-rotary-midtown-vijayawada-148x140.png" alt="Rotary Club of Vijayawada">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Partners End -->
 
         <!-- Projects/Work Start -->
         <section class="section bg-light" id="portfolio">
@@ -389,14 +474,14 @@
                         <div class="container-title text-center mb-4 pb-2">
                             <div class="titles">
                                 <h2 class="title text-capitalize mb-4">My Portfolio</h2>
-                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">
+                                    As a seasoned coach, I have empowered countless clients with transformative strategies for personal and professional growth.
+                                </p>
                                 <span></span>
                             </div>
-                        </div>
+                        </div>                        
                     </div><!--end col-->
                 </div><!--end row-->
-
-
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
@@ -415,7 +500,6 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
                             <div class="card-body p-0">
@@ -431,7 +515,6 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
                             <div class="card-body p-0">
@@ -447,7 +530,6 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
                             <div class="card-body p-0">
@@ -463,7 +545,6 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
                             <div class="card-body p-0">
@@ -479,7 +560,6 @@
                             </div>
                         </div>
                     </div><!--end col-->
-                    
                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                         <div class="card border-0 work-container work-modern position-relative d-block overflow-hidden rounded">
                             <div class="card-body p-0">
@@ -495,13 +575,13 @@
                             </div>
                         </div>
                     </div><!--end col-->
-
                     <div class="col-12 mt-4 pt-2">
                         <div class="text-center">
-                            <a href="page-portfolio.html" class="btn btn btn-primary rounded">See More <i class="mdi mdi-chevron-right"></i></a>
+                            <a href="#" class="btn btn btn-primary rounded">See More <i class="mdi mdi-chevron-right"></i></a>
                         </div>
                     </div><!--end col-->
-                </div><!--end row-->
+                </div>
+                <!--end row-->
             </div>
             <!-- End container -->
         </section>
@@ -614,47 +694,47 @@
         <!--end section -->
 
         <!-- Faq Accordians Start -->
-        <section class="faqs">
+        <section class="section pt-2 pb-2" id="faqs">
             <div class="container">
                 <div class="row">
                     <div class="wrapper">
-                        <div class="accordian">
+                        <div class="accordion">
                             <div class="question">
-                                How do I verify my email?
+                                What services does Sekhara Babu offer?
                             </div>
                             <div class="answercont">
                                 <div class="answer">
-                                    Click the link in the verification email from verify@codepen.io (be sure to check your spam folder).
+                                    Sekhara Babu offers business coaching, leadership training, and entrepreneurial mentorship, helping clients achieve success through effective strategies and guidance.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordian">
+                        <div class="accordion">
                             <div class="question">
-                                My Pen loads infinitely or crashes the browser.
+                                How can Sekhara Babu help my business grow?
                             </div>
                             <div class="answercont">
                                 <div class="answer">
-                                    It's likely an infinite loop in JavaScript that we could not catch.
+                                    Through tailored business coaching, Sekhara Babu provides insights and strategies to enhance productivity, improve leadership skills, and foster sustainable business growth.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordian">
+                        <div class="accordion">
                             <div class="question">
-                                How do I contact the creator of a Pen?
+                                What is the approach used by Sekhara Babu in leadership training?
                             </div>
                             <div class="answercont">
                                 <div class="answer">
-                                    You can leave a comment on any public Pen. Click the "Comments" link in the Pen editor view, or visit the Details page.
+                                    Sekhara Babu's leadership training focuses on practical techniques, personalized mentoring, and interactive workshops to develop effective leadership qualities.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordian">
+                        <div class="accordion">
                             <div class="question">
-                                What version of [library] does CodePen use?
+                                How can I book a session with Sekhara Babu?
                             </div>
                             <div class="answercont">
                                 <div class="answer">
-                                    We have our current list of library versions
+                                    To book a session with Sekhara Babu, visit the "Contact" section on Sekharspeaks.com and fill out the provided form or call the listed contact number for assistance.
                                 </div>
                             </div>
                         </div>
@@ -673,7 +753,6 @@
                             <div class="titles">
                                 <h2 class="title text-capitalize mb-4">Contact Me</h2>
                                 <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">Let's Feel Free to Reach Out to Us for Expert Guidance and Support</p>
-                                <span></span>
                             </div>
                         </div>
                     </div><!--end col-->
@@ -709,27 +788,27 @@
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
-            </div><!--end container-->
-        </section>
-        <!--end section-->
 
-        <section class="section pt-5">
-            <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center pt-5 pb-5">
                     <div class="col-lg-12">
                         <div class="custom-form mb-sm-30" data-aos="fade-up">
                             <form method="post" action="php/contact.php" name="myForm" onsubmit="return validateForm()">
                                 <p id="error-msg"></p>
                                 <div id="simple-msg"></div>
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="offset-lg-2 col-lg-8 offset-lg-2">
                                         <div class="row">
-                                            <div class="col-lg-12 col-md-6">
+                                            <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input name="name" id="name" type="text" class="form-control border rounded" placeholder="First Name :">
                                                 </div>
                                             </div><!--end col-->
-                                            <div class="col-lg-12 col-md-6">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <input name="phone" id="phone" type="tel" class="form-control border rounded" placeholder="Your Phone Number :">
+                                                </div> 
+                                            </div><!--end col-->
+                                            <div class="col-lg-6 col-md-6">
                                                 <div class="form-group">
                                                     <input name="email" id="email" type="email" class="form-control border rounded" placeholder="Your email :">
                                                 </div> 
@@ -739,18 +818,15 @@
                                                     <input name="subject" id="subject" class="form-control border rounded" placeholder="Your subject :">
                                                 </div>                                                                               
                                             </div><!--end col-->
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <textarea name="comments" id="comments" rows="4" class="form-control border rounded" placeholder="Your Message :"></textarea>
+                                                </div>
+                                            </div><!--end col-->
                                         </div><!--end row-->
-                                    </div><!--end col-->
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <textarea name="comments" id="comments" rows="4" class="form-control border rounded" placeholder="Your Message :"></textarea>
-                                        </div>
-                                    </div><!--end col-->
-                                </div><!--end row-->
-                                <div class="row">
-                                    <div class="col-sm-12 text-end">
-                                        <input type="submit" id="submit" name="send" class="submitBnt btn btn btn-primary rounded" value="Send Message"> 
+                                        <div class="col-lg-12 col-sm-12 text-end">
+                                            <input type="submit" id="submit" name="send" class="submitBnt btn btn btn-primary rounded" value="Send Message"> 
+                                        </div><!--end col-->
                                     </div><!--end col-->
                                 </div><!--end row-->
                             </form><!--end form-->
@@ -759,45 +835,109 @@
                 </div><!--end row-->
             </div><!--end container-->
         </section>
-        <!--end section-->
         <!-- Contact End -->
 
         <!-- Footer Start -->
-        <footer class="footer bg-light">
+        <footer class="footer-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <a href="javascript:void(0)" class="footer-logo text-black">SEKHARSPEAKS</a>
-                        <p class="para-desc mx-auto mt-5 text-black">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
-                        <ul class="list-unstyled mb-0 mt-4 social-icon">
-                            <li class="list-inline-item me-1"><a href="javascript:void(0)" class="rounded-circle"><i class="mdi mdi-facebook"></i></a></li>
-                            <li class="list-inline-item me-1"><a href="javascript:void(0)" class="rounded-circle"><i class="mdi mdi-twitter"></i></a></li>
-                            <li class="list-inline-item me-1"><a href="javascript:void(0)" class="rounded-circle"><i class="mdi mdi-instagram"></i></a></li>
-                            <li class="list-inline-item me-1"><a href="javascript:void(0)" class="rounded-circle"><i class="mdi mdi-linkedin"></i></a></li>
-                        </ul>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </footer><!--end footer-->
-        <footer class="footer footer-bar bg-black">
-            <div class="container text-foot text-center">
-                <div class="row">
-                    <div class="footerbottom-left col-12 col-sm-6 col-md-6 text-sm-start">
-                        <p class="p text-white line-height-7">
-                            All rights reserved &copy; <script>document.write(new Date().getFullYear())</script> <a href="/" title="Sekarspeaks" target="_blank">Sekarspeaks</a>
-                        </p>
-                    </div>
-                    <div class="footerbottom-right col-12 col-sm-6 col-md-6">
-                        <p class="p text-white line-height-7 text-sm-end">
-                            Crafted by 
-                            <span class="orange-color">
-                                <a href="https://dt7.agency" title="Dt7 Agency" target="_blank">Dt7.agency</a>
-                            </span>
-                        </p>
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row text-center text-uppercase">
+                        <h1 class="text-white">call to action</h1>
                     </div>
                 </div>
-            </div><!--end container-->
-        </footer><!--end footer-->
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="#" class="footer-logo text-white"><h3>SEKHARSPEAKS</h3></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>
+                                        Shekarababu is dedicated to delivering exceptional design solutions that resonate with your audience. 
+                                        Our mission is to craft engaging and visually appealing experiences that captivate and inspire. 
+                                        If you have any questions or would like to discuss a project, feel free to contact me!
+                                    </p>
+                                    <h3>
+                                        <a href="mailto:cmd@sikharanirmaan.com" title="Email" class="text-white">cmd@sikharanirmaan.com</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#journey">Journey</a></li>
+                                    <li><a href="#portfolio">Portfolio</a></li>
+                                    <li><a href="#testimonial">Testimonial</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button>
+                                            <i data-feather="send" class="fea icon-md"></i>
+                                            <i class="fab fa-telegram-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-social-icon pt-5">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                                    <i data-feather="facebook" class="fea icon-md"></i>
+                                </a>
+                                <a href="https://instagram.com/" target="_blank" title="Instagram">
+                                    <i data-feather="instagram" class="fea icon-md"></i>
+                                </a>
+                                <a href="https://x.com/" target="_blank" title="X">
+                                    <i data-feather="linkedin" class="fea icon-md"></i>
+                                    <i class="fab fa-google-plus-g google-bg"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+                                    <i data-feather="twitter" class="fea icon-md"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="footerbottom-left copyright-text col-12 col-sm-6 col-md-6 text-sm-start">
+                            <p class="p line-height-7">
+                                All rights reserved Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="/" title="Sekarspeaks" target="_blank">Sekarspeaks</a>
+                            </p>
+                        </div>
+                        <div class="footerbottom-right copyright-text col-12 col-sm-6 col-md-6">
+                            <p class="p line-height-7 text-sm-end">
+                                Crafted by 
+                                <span class="orange-color">
+                                    <a href="https://dt7.agency" title="Dt7 Agency" target="_blank">Dt7.agency</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>        
         <!-- Footer End -->
 
         <a href="javascript: void(0);" class="back-to-top btn btn-icon btn-soft-primary" id="back-to-top" onclick="topFunction()">
@@ -805,91 +945,43 @@
         </a>
         <!-- Back to top -->
 
-        <!-- Style switcher -->
-        <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
-            <div>
-                <h6 class="color-scheme-title text-center font-weight-bolder mb-2">Select your color</h6>
-                <ul class="pattern text-center mb-0">                    
-                    <li class="list-inline-item">
-                        <a class="custom-primary" href="javascript: void(0);" onclick="setColor('custom-primary')"></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="custom-secondary" href="javascript: void(0);" onclick="setColor('custom-secondary')"></a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a class="default" href="javascript: void(0);" onclick="setColor('default')"></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="blue" href="javascript: void(0);" onclick="setColor('red')"></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="green" href="javascript: void(0);" onclick="setColor('green')"></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="mosaic-blue" href="javascript: void(0);" onclick="setColor('mosaic-blue')"></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="light-yellow" href="javascript: void(0);" onclick="setColor('light-yellow')"></a>
-                    </li>  
-                    <li class="list-inline-item">
-                        <a class="purple" href="javascript: void(0);" onclick="setColor('purple')"></a>
-                    </li>            
-                </ul>
-                <div class="bottom">
-                    <a href="javascript: void(0);" class="settings bg-white shadow d-block"><i class="mdi mdi-settings mdi-24px position-absolute mdi-spin text-primary"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- end Style switcher -->
-
         <!-- Custom JS -->
         <script src="js/custom.js"></script>
-
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- Javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/gumshoe.js"></script>
-
         <!-- Slider -->
         <script src="js/tiny-slider.js "></script>
         <script src="js/tiny-slider-init.js "></script>
-
         <!-- MK Lightbox -->
         <script src="js/mklb.js"></script>
-
         <!-- Contact -->
         <script src="js/contact.js"></script>
-
         <!-- Counter init -->
         <script src="js/counter.init.js"></script>
-
         <!-- Feather icon -->
         <script src="js/feather.min.js"></script>
-
         <!-- Typed -->
         <script src="js/typed.js"></script>
         <script src="js/typed.init.js"></script>
-
         <!-- Animation -->
         <script src="js/aos.js "></script>
-
         <!-- Switcher -->
         <script src="js/switcher.js"></script>
-
         <!-- Main Js -->
         <script src="js/app.js"></script>
-
         <!-- Animation Js -->
         <script>
             AOS.init({
                 easing: 'ease-in-out-sine',
                 duration: 1000
             });
-
             if (document.querySelector('nav#navbar a')) {
                 var spy = new Gumshoe('nav#navbar a');
             }
         </script>
-
     </body>
 </html>
