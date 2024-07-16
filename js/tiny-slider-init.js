@@ -1,5 +1,5 @@
 
-//Tiny slider
+// Tiny slider
 var slider = tns({
     container: '.client-review-slider',
     items: 1,
@@ -15,8 +15,14 @@ var slider = tns({
     speed: 400,
     gutter: 15,
     responsive: {
-        767: {
-            items: 3
+        480: {
+            items: 1
         },
+        768: {
+            items: 2
+        },
+        991: {
+            items: 3
+        }
     },
 });
