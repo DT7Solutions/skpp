@@ -6,13 +6,18 @@
   background-color: #8E3234;
 }
 
-body,
-.nav-sticky{
+body{
   background: #0A233E !important;
+}
+.nav-sticky {
+  background: #8E3234 !important;
 }
 .navbar-custom .navigation .nav-item .nav-link,
 .nav-sticky.navbar-custom .navigation .nav-item .nav-link {
   color: white;
+}
+.navbar {
+  min-height: 50px;
 }
 .navbar-custom .navigation .nav-item.active .nav-link {
   color: white;
@@ -27,7 +32,7 @@ body,
 .nav-sticky.navbar-custom .logo {
   color: white !important;
 }
-.navbar-custom .navbar-toggler {
+.nav-sticky .navbar-toggler {
   color: white !important;
 }
 .custom-btn {
@@ -52,10 +57,11 @@ body,
 .public-profile {
   background: #223851;
   margin: 5% 0%;
+  padding: 2.5% 0%;
 }
 .about .card-body {
-  padding: 5% 10%;
-  scale: 1.1;
+  padding: 2.5% 5%;
+  scale: 1;
 }
 .about .card-body .heading{
   color: white;
@@ -118,7 +124,7 @@ body,
   transition: all 0.3s ease;
 }
 .tc-partners-style8 .partner-card .logo img{
-  scale: 1.5;
+  scale: 1;
 }
 .tc-partners-style8 .partner-card .foot-inf {
   display: flex;
@@ -160,12 +166,15 @@ body,
   top: 0;
   width: 100%;
   height: 100%;
-  text-align: start;
-  padding: 30px;
+  text-align: center;
+  padding: 10%;
   opacity: 0;
   margin-top: 30px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.tc-partners-style8 .partner-card .info p{
+  color: white;
 }
 .testimonial .client-review {
   background: linear-gradient(180deg, rgba(20, 73, 128, 0.8) 0%, rgba(142, 50, 52, 0.2) 100%);
@@ -383,28 +392,18 @@ textarea::placeholder {
   font-size: 14px;
   color: #878787;
 }
-.copyright-text p a{
-  color: #ff5e14;
+.copyright-area p a{
+  color: #8E3234;
+  font-weight: 600;
 }
-.footer-menu li {
-  display: inline-block;
-  margin-left: 20px;
-}
-.footer-menu li:hover a{
-  color: #ff5e14;
-}
-.footer-menu li a {
-  font-size: 14px;
-  color: #878787;
-}
-
-
 
 @media screen and (max-width: 991px) {
   .nav-sticky .navbar-nav .nav-item .nav-link {
     color: white !important;
   }
-
+  .navbar-custom .navigation .nav-item.active .nav-link {
+    border: none;
+  }
   .navbar-custom .navigation .nav-item.custom-btn .nav-link{
     background-color: transparent !important;
     border: 1px solid transparent !important;
@@ -436,18 +435,33 @@ textarea::placeholder {
   }
 }
 @media screen and (max-width: 567px) {
-    .main-timeline .timeline-content {
-      padding: 40px 20px 15px 10px;
-      margin: 2.5% 0%;
-    }
-    .main-timeline .timeline:nth-child(even) .timeline-content {
-      padding: 40px 20px 20px 10px;
-      margin: 2.5% 0%;
-    }
-    .skill-badge {
-      position: absolute;
-      right: 55%;
-      top: 2.5%;
-      margin-right: 50px;
-    }
+  .title-heading {
+    margin-top: 50% !important;
+    padding-bottom: 0%;
+  }
+  .public-profile {
+    text-align: justify;
+  }
+  .public-profile p {
+    font-size: 1rem !important;
+  }
+  .main-timeline .timeline-content,
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 15px 20px 15px 120px;
+    border-radius: 24px;
+  }
+  .main-timeline .timeline-content {
+    padding: 40px 20px 15px 10px;
+    margin: 2.5% 0%;
+  }
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 40px 20px 20px 10px;
+    margin: 2.5% 0%;
+  }
+  .skill-badge {
+    position: absolute;
+    right: 55%;
+    top: 2.5%;
+    margin-right: 50px;
+  }
 }
