@@ -1051,12 +1051,35 @@
                                         </div>
                                     </div>
                                     <div id="form-msg-box" class="col-12">
-                                        <div class="alert-success"></div>
-                                        <div class="alert-error"></div>
+                                        <!-- Message box for success or error -->
+                                        <div class="alert alert-success"></div>
+                                        <div class="alert alert-error"></div>
                                     </div>
                                 </div>
                             </form>
-                        </div>                        
+                        </div>
+                        <!-- Success and Error Message SVG Icons -->
+                        <div id="success-svg" class="contact-card">
+                          <div style="border-radius: 200px; height: 200px; width: 200px; background: #d4edda; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <!-- Updated success SVG icon -->
+                              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="#155724"/>
+                            </svg>
+                          </div>
+                          <h1>Success</h1> 
+                          <p>We received your message;<br/> we'll be in touch shortly!</p>
+                        </div>
+                        <div id="error-svg" class="contact-card">
+                          <div style="border-radius: 200px; height: 200px; width: 200px; background: #f8d7da; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <!-- Basic error SVG icon -->
+                              <path d="M4 4l16 16m0-16L4 20" stroke="#721c24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                          <h1>Error</h1> 
+                          <p>Sorry, something went wrong.<br/> Please try again later.</p>
+                        </div>
+
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->

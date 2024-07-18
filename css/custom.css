@@ -353,8 +353,7 @@ textarea::placeholder {
 /* Form Submit Message Style */
 .error-msg {
   color: red;
-  font-size: 0.875rem;
-  margin-top: 5px;
+  font-size: 14px;
 }
 .alert {
   padding: 20px;
@@ -368,15 +367,26 @@ textarea::placeholder {
 .alert-success {
   background-color: #d4edda;
   color: #155724;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 .alert-error {
   background-color: #f8d7da;
   color: #721c24;
 }
+.custom-form {
+  position: relative;
+}
+.contact-card {
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* Footer Style */
 .footer {
   padding: 0%;
   background: #0A233E;
@@ -514,7 +524,8 @@ textarea::placeholder {
     padding: 50px 0 0;
   }
   .contact-box {
-    max-height: 675px;
+    max-height: 650px;
+    min-height: 600px;
   }
 }
 @media screen and (max-width: 567px) {

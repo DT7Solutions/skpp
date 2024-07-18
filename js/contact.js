@@ -13,46 +13,41 @@ function Send() {
   };
 
   const serviceID = "service_dolczhj";
-  const templateID = "template_itewwbr";
-  
+  const templateID = "template_itewwb";
+
   // Select the success and error message boxes
   const successBox = document.querySelector('.alert-success');
   const errorBox = document.querySelector('.alert-error');
+  const formMsgBox = document.getElementById('form-msg-box');
 
   emailjs.send(serviceID, templateID, params)
     .then(function(response) {
       console.log('Email sent successfully:', response.status, response.text, params);
-      successBox.innerHTML = "Thank you, " + params.name + "! Your message has been sent successfully.";
-      successBox.style.display = 'block';
-      errorBox.style.display = 'none'; // Hide error box if shown
+      document.getElementById('success-svg').style.display = 'block';
+      document.getElementById('error-svg').style.display = 'none'; // Hide error card if shown
+      formMsgBox.classList.remove('d-none'); // Show message box
     })
     .catch(function(error) {
       console.error("Email sending failed:", error);
-      errorBox.innerHTML = "Sorry, " + params.name + ". Oops! Something went wrong. Please try again later.";
-      errorBox.style.display = 'block';
-      successBox.style.display = 'none'; // Hide success box if shown
+      document.getElementById('error-svg').style.display = 'block';
+      document.getElementById('success-svg').style.display = 'none'; // Hide success card if shown
+      formMsgBox.classList.remove('d-none'); // Show message box
     });
 
+  // Hide contact-info form after submission
+  document.getElementById('contact-info').style.display = 'none';
+
+  // Hide message box after 5 seconds
+  setTimeout(function() {
+    formMsgBox.classList.add('d-none');
+    document.getElementById('contact-info').style.display = 'block'; // Show contact-info form again
+    document.getElementById('contact-info').reset(); // Reset form fields
+    document.querySelectorAll('.contact-card').forEach(function(card) {
+      card.style.display = 'none'; // Hide both success and error cards
+    });
+  }, 50000); // 5 seconds timeout
+
   return false;
-}
-
-// Show message box
-function showMessage(message, type) {
-  const form = document.getElementById('contact-info');
-  form.style.display = "none";
-
-  const messageBox = document.getElementById('form-msg-box');
-  const alertClass = type === "success" ? "alert-success" : "alert-error";
-  messageBox.innerHTML = `<div class='alert ${alertClass}' style='color: white;'>${message}</div>`;
-
-  messageBox.style.display = "block";
-
-  setTimeout(() => {
-    messageBox.innerHTML = "";
-    messageBox.style.display = "none";
-    form.style.display = "block";
-    form.reset();
-  }, 5000);
 }
 
 // Form validation function
@@ -90,34 +85,29 @@ function validateForm() {
 
   return isValid;
 }
+
 // Clear error messages and adjust form group margins
 function clearErrorMessages() {
   const errorElements = document.getElementsByClassName("error-msg");
-  for (let element of errorElements) {
+  for (let i = 0; i < errorElements.length; i++) {
+    const element = errorElements[i];
     element.innerHTML = "";
-    element.style.display = "none";
-  }
-  adjustFormGroupMargins();
-}
-
-// Show error message and adjust form group margins
-function showError(elementId, message) {
-  const errorMsg = document.getElementById(elementId);
-  errorMsg.innerHTML = message;
-  errorMsg.style.display = "block";
-  adjustFormGroupMargins();
-}
-
-// Adjust form group margins based on error message presence
-function adjustFormGroupMargins() {
-  const formgroupElements = document.getElementsByClassName("form-group");
-  for (let element of formgroupElements) {
-    const errorElement = element.querySelector(".error-msg");
-    if (errorElement && errorElement.innerHTML !== "") {
+    if (element.innerHTML !== "") {
       element.style.marginBottom = "15px";
     } else {
       element.style.marginBottom = "25px";
     }
+  }
+}
+
+// Show error message in the respective error-msg div
+function showError(id, message) {
+  document.getElementById(id).innerHTML = message;
+  const element = document.getElementById(id);
+  if (element.innerHTML !== "") {
+    element.style.marginBottom = "-15px";
+  } else {
+    element.style.marginBottom = "25px";
   }
 }
 
