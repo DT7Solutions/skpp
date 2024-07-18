@@ -5,7 +5,6 @@
 #preloader .double-bounce1, #preloader .double-bounce2 {
   background-color: #8E3234;
 }
-
 body{
   background: #0A233E !important;
 }
@@ -33,6 +32,9 @@ body{
 .nav-sticky.navbar-custom .logo {
   color: white !important;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 .nav-sticky .navbar-toggler {
   color: white !important;
 }
@@ -42,10 +44,34 @@ body{
   transition: all 0.3s;
   border-radius: 10px !important;
 }
+.back-to-top {
+  z-index: 99;
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
+  border-radius: 12px;
+  line-height: 30px;
+  display: none;
+  color: #8E3234 !important;
+  background-color: transparent !important;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 5px rgba(22, 28, 45, 0.15);
+}
+.back-to-top:hover {
+  background-color: #8E3234 !important;
+  color: #0A233E !important;
+}
+.back-to-top .icons {
+  transition: all 0.5s ease;
+  stroke-width: 5;
+  height: 20px;
+  width: 20px;
+}
 .hero-area {
   background: radial-gradient(63.17% 68.09% at 64.51% 31.83%, rgba(10, 35, 62, 0) 0%, #0A233E 100%), url('../images/hero.png');
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   position: relative;
 }
 .section {
@@ -55,7 +81,7 @@ body{
 }
 .public-profile {
   background: #223851;
-  margin: 5% 0%;
+  margin: 5% 0% 0%;
   padding: 2.5% 0%;
 }
 .about .card-body {
@@ -65,11 +91,18 @@ body{
 .about .card-body .heading{
   color: white;
 }
+.about-me-quote {
+  min-width: 334px;
+  text-align: center;
+}
 #counter .counter-box {
   background: #0C2B4A;
 }
-#counter .card-body h2{
+#counter .card-body h2,
+#counter .card-body h2 span{
   color: #8E3234;
+  font-weight: 800;
+  scale: 1.5;
 }
 #counter .card-body h5{
   color: white;
@@ -299,6 +332,9 @@ body{
   border-radius: 12px;
   margin-bottom: 7.5%;
 }
+.fea.icon-md {
+  scale: 1.5;
+}
 .contact-box {
   max-height: 600px;
   background: #0D2B4A;
@@ -313,39 +349,34 @@ input::placeholder,
 textarea::placeholder {
     color: #8492A6 !important;
 }
+
+/* Form Submit Message Style */
 .error-msg {
   color: red;
   font-size: 0.875rem;
-  margin-top: 0.25rem;
-  visibility: hidden;
-  height: 0;
+  margin-top: 5px;
 }
-.error {
-  border-color: red;
+.alert {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
-.alert-success, .alert-error {
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  margin-top: 1rem;
-}
-.alert-success {
-  color: green;
-  background-color: #e6f7e6;
+  flex-direction: column;
 }
 .alert-error {
-  color: red;
-  background-color: #f7e6e6;
+  background-color: #f8d7da;
+  color: #721c24;
 }
-.alert-icon {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
-
 .footer {
   padding: 0%;
   background: #0A233E;
@@ -416,8 +447,9 @@ textarea::placeholder {
   border-radius: 50%;
 }
 .copyright-area{
-  padding: 25px 0;
+  padding: 1% 0;
 }
+.copyright-area p ,
 .copyright-text p {
   margin: 0;
   font-size: 14px;
@@ -425,15 +457,42 @@ textarea::placeholder {
 }
 .copyright-area p a{
   color: #8E3234;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 18px;
 }
-
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .hero-area {
+    padding: 10% 0% !important;
+  }
+}
+@media (min-width: 567px) and (max-width: 1920px) {
+  .main-timeline .timeline-content {
+    padding: 15px 20px 15px 120px;
+    border-radius: 0px 0px 0px 100px;
+  }
+  .main-timeline .timeline-icon {
+    left: 20px;
+    right: auto;
+    bottom: auto;
+    top: -42px;
+  }
+}
 @media screen and (max-width: 991px) {
+  .navbar-custom .container {
+    width: 100%;
+  }
   .nav-sticky .navbar-nav .nav-item .nav-link {
     color: white !important;
   }
   .navbar-custom .navigation .nav-item.active .nav-link {
     border: none;
+    color: #8E3234 !important;
+    font-size: 18px;
+  }
+  .nav-sticky .navigation .nav-item.active .nav-link {
+    border: none;
+    color: #0A233E !important;
+    font-size: 18px;
   }
   .navbar-custom .navigation .nav-item.custom-btn .nav-link{
     background-color: transparent !important;
@@ -449,26 +508,20 @@ textarea::placeholder {
   .tc-partners-style8 {
     padding: 50px 0 0;
   }
-  .tc-partners-style8 .content {
-    padding-bottom: 50px;
-  }
-}
-@media screen and (min-width: 567px) {
-  .main-timeline .timeline-content {
-    padding: 15px 20px 15px 120px;
-    border-radius: 0px 0px 0px 100px;
-  }
-  .main-timeline .timeline-icon {
-    left: 20px;
-    right: auto;
-    bottom: auto;
-    top: -42px;
+  .contact-box {
+    max-height: 675px;
   }
 }
 @media screen and (max-width: 567px) {
+  .hero-area {
+    max-height: 450px;
+  }
   .title-heading {
-    margin-top: 50% !important;
+    margin-top: 0% !important;
     padding-bottom: 0%;
+  }
+  .title-heading .heading {
+    font-size: 40px;
   }
   .public-profile {
     text-align: justify;
@@ -476,23 +529,30 @@ textarea::placeholder {
   .public-profile p {
     font-size: 1rem !important;
   }
+  .about-me-quote {
+    min-width: auto;
+    text-align: center;
+  }
+  .main-timeline {
+    margin-left:  -2.5%;
+  }
   .main-timeline .timeline-content,
   .main-timeline .timeline:nth-child(even) .timeline-content {
     padding: 15px 20px 15px 120px;
     border-radius: 24px;
   }
   .main-timeline .timeline-content {
-    padding: 40px 20px 15px 10px;
+    padding: 40px 20px 15px 20px;
     margin: 2.5% 0%;
   }
   .main-timeline .timeline:nth-child(even) .timeline-content {
-    padding: 40px 20px 20px 10px;
+    padding: 40px 20px 15px 20px;
     margin: 2.5% 0%;
   }
   .skill-badge {
     position: absolute;
     right: 55%;
     top: 2.5%;
-    margin-right: 50px;
+    margin-right: 45px;
   }
 }

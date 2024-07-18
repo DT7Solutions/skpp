@@ -59,10 +59,10 @@
                 <!-- Logo container-->
                 <a class="logo text-white" href="/">SEKHARSPEAKS</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                    <i class="mdi mdi-menu"></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu" id="navbarIcon"></i>
                 </button><!--end button-->
+                  
 
                 <div class="collapse navbar-collapse navigation" id="navbarCollapse">
                     <ul id="navbar-navlist" class="navbar-nav ms-auto">
@@ -163,8 +163,8 @@
         <!-- Count Start -->
         <section class="section fan-fact counter" id="counter">
             <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-3">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-3 col-12">
                         <div class="col-12 my-3">
                             <div class="card counter-box border-0 shadow text-center rounded py-3">
                                 <div class="card-body py-5">
@@ -190,15 +190,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-12">
-                        <img src="images/about-us.png" alt="about-us">
+                    <div class="col-lg-5 col-12 d-flex justify-content-center">
+                        <img src="images/sekharspeaks-sekhar-babu-about-profile-444x633.png" alt="about-us">
                     </div>
-                    <div class="col-lg-4 offset-lg-1 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="col-12">
                             <img src="images/about-me.png" alt="about-me">
                         </div>
-                        <div class="col-12 mt-2">
-                            <h2 class="text-white line-height-3 h2">
+                        <div class="col-12 mt-4 about-me-quote">
+                            <h3 class="text-white line-height-2 h3">
                                 Achieving Success
                             </h2>
                             <div class="quote">
@@ -208,12 +208,12 @@
                                         <path fill="#A62D25" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z"></path>
                                     </svg>                                            
                                 </div>
-                                <p class="p about-text fw-500 text-light-muted text-justify line-height-5 mt-10">
+                                <p class="p about-text fw-500 text-light-muted text-center line-height-5 mt-10 mb-0">
                                     Unlock your business's true potential with strategic vision and relentless execution. 
                                     Embrace challenges, innovate constantly, and lead with integrity. Success is not just a 
                                     destination but a continuous journey of growth and excellence.
                                 </p>
-                                <p class="fw-300 text-white text-justify">
+                                <p class="fw-300 text-white text-center mb-0">
                                     – Sekhara Babu P S
                                 </p>
                                 <div class="d-flex justify-content-end">
@@ -1018,26 +1018,31 @@
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <input name="name" id="name" type="text" class="form-control border rounded" placeholder="First Name :">
+                                                    <div class="error-msg" id="name-error"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="form-group">
                                                     <input name="phone" id="phone" type="tel" class="form-control border rounded" placeholder="Your Phone Number :">
+                                                    <div class="error-msg" id="phone-error"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="form-group">
                                                     <input name="email" id="email" type="email" class="form-control border rounded" placeholder="Your email :">
+                                                    <div class="error-msg" id="email-error"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <input name="subject" id="subject" class="form-control border rounded" placeholder="Your subject :">
+                                                    <div class="error-msg" id="subject-error"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <textarea name="message" id="message" rows="4" class="form-control border rounded" placeholder="Your Message :"></textarea>
+                                                    <div class="error-msg" id="message-error"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1045,7 +1050,10 @@
                                             <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary rounded" value="Send Message">
                                         </div>
                                     </div>
-                                    <div id="form-msg-box" class="col-12"></div>
+                                    <div id="form-msg-box" class="col-12">
+                                        <div class="alert-success"></div>
+                                        <div class="alert-error"></div>
+                                    </div>
                                 </div>
                             </form>
                         </div>                        

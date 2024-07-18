@@ -17,3 +17,20 @@ question.forEach(question => {
     }
   })
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarIcon = document.getElementById('navbarIcon');
+
+  navbarToggler.addEventListener('click', function() {
+    const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
+      navbarIcon.classList.remove('mdi-menu');
+      navbarIcon.classList.add('mdi-close');
+    } else {
+      navbarIcon.classList.remove('mdi-close');
+      navbarIcon.classList.add('mdi-menu');
+    }
+  });
+});
