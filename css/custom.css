@@ -470,19 +470,28 @@ textarea::placeholder {
   font-weight: 900;
   font-size: 18px;
 }
-@media (min-width: 1640px) and (max-width: 1920px) {
+@media (min-width: 1540px) and (max-width: 1920px) {
   .hero-area {
     padding: 10% 0% !important;
   }
+  .contact-detail {
+    min-height: 285px;
+  }
 }
-@media (min-width: 1280px) and (max-width: 1640px) {
+@media (min-width: 1280px) and (max-width: 1540px) {
   .hero-area {
     padding: 5% 0% !important;
   }
+  .contact-detail {
+    min-height: 275px;
+  }
 }
-@media (min-width: 991px) and (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .hero-area {
     padding: 2.5% 0% !important;
+  }
+  .contact-detail {
+    min-height: 265px;
   }
 }
 @media (min-width: 567px) and (max-width: 1920px) {
