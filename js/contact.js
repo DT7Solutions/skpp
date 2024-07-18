@@ -13,7 +13,7 @@ function Send() {
   };
 
   const serviceID = "service_dolczhj";
-  const templateID = "template_itewwb";
+  const templateID = "template_itewwbr";
 
   // Select the success and error message boxes
   const successBox = document.querySelector('.alert-success');
