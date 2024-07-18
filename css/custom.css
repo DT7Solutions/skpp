@@ -43,7 +43,7 @@ body{
   border-radius: 10px !important;
 }
 .hero-area {
-  background: radial-gradient(63.17% 68.09% at 64.51% 31.83%, rgba(10, 35, 62, 0) 0%, #0A233E 100%), url('/images/hero.png');
+  background: radial-gradient(63.17% 68.09% at 64.51% 31.83%, rgba(10, 35, 62, 0) 0%, #0A233E 100%), url('images/hero.png');
   background-size: cover;
   background-position: center center;
   position: relative;
