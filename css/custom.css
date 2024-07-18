@@ -460,9 +460,14 @@ textarea::placeholder {
   font-weight: 900;
   font-size: 18px;
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1640px) and (max-width: 1920px) {
   .hero-area {
     padding: 10% 0% !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1640px) {
+  .hero-area {
+    padding: 5% 0% !important;
   }
 }
 @media (min-width: 567px) and (max-width: 1920px) {
