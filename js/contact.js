@@ -1,44 +1,40 @@
 // Function to send form data using EmailJS
 function Send() {
   if (!validateForm()) {
-    return false;
+      return false;
   }
 
   var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
   };
 
   const serviceID = "service_dolczhj";
   const templateID = "template_itewwbr";
 
   emailjs.send(serviceID, templateID, params)
-    .then(function(response) {
-      console.log('Email sent successfully:', response.status, response.text, params);
-      showMessage("success", "Thank you, " + params.name + "! Your message has been sent successfully.");
-    }, function(error) {
-      console.error("Email sending failed:", error);
-      showMessage("error", "Sorry, " + params.name + ". Oops! Something went wrong. Please try again later.");
-    });
+      .then(function(response) {
+          console.log('Email sent successfully:', response.status, response.text, params);
+          showMessage("Thank you, " + params.name + "! Your message has been sent successfully.");
+      }, function(error) {
+          console.error("Email sending failed:", error);
+          showMessage("Sorry, " + params.name + ". Oops! Something went wrong. Please try again later.");
+      });
 
   return false;
 }
 
 // Show message box
-function showMessage(type, message) {
+function showMessage(message) {
   const messageBox = document.getElementById('form-msg-box');
-  const icon = type === "success" ? "✔️" : "❌";
-  const alertClass = type === "success" ? "alert-success" : "alert-error";
-  
-  messageBox.innerHTML = `<div class='${alertClass}'><span class='alert-icon'>${icon}</span>${message}</div>`;
-  
+  messageBox.innerHTML = `<div class='alert alert-success'>${message}</div>`;
   document.getElementById('contact-info').reset();
-  
+
   setTimeout(() => {
-    messageBox.innerHTML = "";
+      messageBox.innerHTML = "";
   }, 5000);
 }
 
@@ -50,48 +46,30 @@ function validateForm() {
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
 
-  document.getElementById("error-msg").style.opacity = 0;
-  document.getElementById('error-msg').innerHTML = "";
+  var errorMessages = [];
 
-  if (name == "" || name == null) {
-    document.getElementById('error-msg').innerHTML = "*Please enter a Name*";
-    fadeIn();
-    return false;
+  if (!name) {
+      errorMessages.push("Please enter a Name.");
   }
-  if (email == "" || email == null) {
-    document.getElementById('error-msg').innerHTML = "*Please enter an Email*";
-    fadeIn();
-    return false;
+  if (!email) {
+      errorMessages.push("Please enter an Email.");
   }
-  if (phone == "" || phone == null) {
-    document.getElementById('error-msg').innerHTML = "*Please enter a Phone Number*";
-    fadeIn();
-    return false;
+  if (!phone) {
+      errorMessages.push("Please enter a Phone Number.");
   }
-  if (subject == "" || subject == null) {
-    document.getElementById('error-msg').innerHTML = "*Please enter a Subject*";
-    fadeIn();
-    return false;
+  if (!subject) {
+      errorMessages.push("Please enter a Subject.");
   }
-  if (message == "" || message == null) {
-    document.getElementById('error-msg').innerHTML = "*Please enter a Message*";
-    fadeIn();
-    return false;
+  if (!message) {
+      errorMessages.push("Please enter a Message.");
   }
+
+  if (errorMessages.length > 0) {
+      alert(errorMessages.join("\n"));
+      return false;
+  }
+
   return true;
-}
-
-function fadeIn() {
-  var fade = document.getElementById("error-msg");
-  var opacity = 0;
-  var intervalID = setInterval(function() {
-    if (opacity < 1) {
-      opacity = opacity + 0.5;
-      fade.style.opacity = opacity;
-    } else {
-      clearInterval(intervalID);
-    }
-  }, 200);
 }
 
 /* 
