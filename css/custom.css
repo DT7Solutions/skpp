@@ -12,6 +12,10 @@
 body{
   background: #0A233E !important;
 }
+.logo img,
+.footer-logo img {
+  border-radius: 12px;
+}
 .nav-sticky {
   background: #8E3234 !important;
 }
@@ -271,6 +275,9 @@ body{
 .main-timeline .timeline:nth-child(even) .timeline-content {
   padding: 20px 120px 20px 20px;
   margin: 10px 0 0;
+}
+.main-timeline .description {
+  text-align: justify;
 }
 .modal-body {
   overflow-y: auto;
