@@ -654,10 +654,12 @@ textarea::placeholder {
     min-height: 600px;
   }
 }
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 768px) {
   #about{
-    nargin-top: 15%;
+    padding-top: 15%;
   }
+}
+@media screen and (max-width: 567px) {
   .hero-area {
     max-height: 450px;
   }
