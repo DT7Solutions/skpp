@@ -5,6 +5,6 @@ var typed = new Typed('#typed', {
     typeSpeed: 200,
     loop: true,
     strings: [
-        'Business Coach', 'Action Coach', 'Life Coach',
+        'Action Coach', 'Life Coach', 'Business Man','Business Coach',
     ],
 });
