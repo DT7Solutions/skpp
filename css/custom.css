@@ -14,7 +14,7 @@ body{
 }
 .logo img,
 .footer-logo img {
-  border-radius: 12px;
+  border-radius: 6px;
 }
 .nav-sticky {
   background: #8E3234 !important;
@@ -431,9 +431,6 @@ textarea::placeholder {
 }
 .footer-logo {
   margin-bottom: 30px;
-}
-.footer-logo img {
-  max-width: 200px;
 }
 .footer-text p {
   margin-bottom: 14px;
