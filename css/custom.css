@@ -656,7 +656,7 @@ textarea::placeholder {
 }
 @media screen and (max-width: 567px) {
   #about{
-    padding-top: 10%;
+    padding-top: 25%;
   }
   .hero-area {
     max-height: 450px;
