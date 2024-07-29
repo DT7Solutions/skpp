@@ -5,12 +5,10 @@
     <title>Website Comming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-            window.location.replace('/coming-soon.html');
-        } else {
+        if (window.location.pathname !== '/coming-soon.html') {
             window.location.replace('/coming-soon.html');
         }
-    </script>        
+    </script>          
 </head>
 <body>
     <style>
