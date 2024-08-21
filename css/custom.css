@@ -310,6 +310,10 @@ body{
   position: relative;
   background-position: center center;
 }
+.main-timeline .timeline {
+  width: 90%;
+  float: left;
+}
 .main-timeline .timeline-icon {
   border: 7px solid transparent;
 }
@@ -317,7 +321,7 @@ body{
   border-radius: 50%;
 }
 .main-timeline .timeline-content {
-  padding: 15px 20px 15px 100px;
+  padding: 20px 20px 20px 130px;
   margin: 0 0px;
   border: 1px solid #433F52;
   background: #0E2B4A;
@@ -329,7 +333,7 @@ body{
   margin: -10px 0 10px;
 }
 .main-timeline .timeline:nth-child(even) .timeline-content {
-  padding: 20px 120px 20px 20px;
+  padding: 20px 110px 20px 20px;
   margin: 10px 0 0;
 }
 .main-timeline .description {
@@ -603,7 +607,6 @@ textarea::placeholder {
 }
 @media (min-width: 567px) and (max-width: 1920px) {
   .main-timeline .timeline-content {
-    padding: 15px 20px 15px 120px;
     border-radius: 0px 0px 0px 100px;
   }
   .main-timeline .timeline-icon {
@@ -673,6 +676,7 @@ textarea::placeholder {
     padding-top: 50%;
   }
   .hero-area {
+    background-position: 70%;
     max-height: 450px;
   }
   .title-heading {
