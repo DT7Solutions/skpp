@@ -310,6 +310,9 @@ body{
   position: relative;
   background-position: center center;
 }
+.margin-neg-50 {
+  margin-right: -50px;
+}
 .main-timeline .timeline {
   width: 90%;
   float: left;
@@ -607,7 +610,13 @@ textarea::placeholder {
 }
 @media (min-width: 567px) and (max-width: 1920px) {
   .main-timeline .timeline-content {
+    padding: 20px 20px 20px 100px;
     border-radius: 0px 0px 0px 100px;
+    margin-bottom: 5%;
+  }
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 20px 100px 20px 20px;
+    margin-bottom: 5%;
   }
   .main-timeline .timeline-icon {
     left: 20px;
