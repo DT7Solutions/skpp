@@ -342,6 +342,12 @@ body{
 .main-timeline .description {
   text-align: justify;
 }
+.timeline-content .margin-50 {
+  margin-right: 6%;
+}
+.timeline-content .margin-neg-50 {
+  margin-right: -6%;
+}
 .modal-body {
   overflow-y: auto;
   max-height: auto;
@@ -674,6 +680,12 @@ textarea::placeholder {
     max-height: 650px;
     min-height: 600px;
   }
+  .timeline-content .margin-50 {
+    margin-right: 3.5%;
+  }
+  .timeline-content .margin-neg-50 {
+    margin-right: -7.5%;
+  }
 }
 @media screen and (max-width: 768px) {
   #about{
@@ -726,5 +738,14 @@ textarea::placeholder {
     right: 55%;
     top: 2.5%;
     margin-right: 10%;
+  }
+  .main-timeline .timeline {
+    width: 100%;
+  }
+  .timeline-content .margin-50 {
+    margin-right: 11.5%;
+  }
+  .timeline-content .margin-neg-50 {
+    margin-right: 8.5%;
   }
 }
