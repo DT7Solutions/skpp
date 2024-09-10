@@ -6,16 +6,16 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -60px 0 0 -60px;
+  transform: translateX(-50%) translateY(-50%);
   background: #fff;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   border-radius: 100%;
-  border: 2px dotted rgba(215, 215, 215, 1);
+  border: 1px dotted rgba(215, 215, 215, 1);
 }
 .loading img {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -32,7 +32,7 @@
   top: 0%;
   left: 0%;
   opacity: 1;
-  box-shadow:  #8E3234 -4px -5px 3px -3px, #0A233E 4px 5px 3px -3px;
+  box-shadow:  #8E3234 -2px -2.5px 1.5px -1.5px, #0A233E 2px 2.5px 1.5px -1.5px;
 }
 .loading:after {
   animation: rotate 1s infinite linear;
@@ -76,7 +76,7 @@ body{
 }
 .navbar {
   min-height: 50px;
-  padding: 1% 0% !important;
+  padding: 0.25% 0% !important;
 }
 .navbar-custom .navigation .nav-item.active .nav-link {
   color: white;
@@ -173,6 +173,10 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.services .feature-widget:hover {
+  scale: 1.05;
+  background: linear-gradient(180deg, rgba(20, 73, 128, 0.5) 0%, rgba(142, 50, 52, 0.6) 90%);
 }
 .services-texts .text-primary {
   border: 1px solid #007BFF;
@@ -286,9 +290,10 @@ body{
   padding: 2.5% 5%;
   z-index: 1;
   position: absolute;
-  bottom: 0.5%;
+  bottom: -1%;
   left: 50%;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   text-align: center;
   transform: translateX(-50%);
 }
@@ -336,7 +341,7 @@ body{
   float: left;
 }
 .main-timeline .timeline-icon {
-  border: 7px solid transparent;
+  border: 0px solid transparent;
 }
 .main-timeline .timeline-icon img{
   border-radius: 50%;
@@ -349,6 +354,10 @@ body{
   top: 24px;
   left: 12px;
   border-radius: 12px;
+}
+.main-timeline .timeline-content:hover {
+  scale: 1.05;
+  background: linear-gradient(180deg, rgba(20, 73, 128, 0.3) 0%, rgba(142, 50, 52, 0.2) 90%);
 }
 .main-timeline .timeline:nth-child(even) {
   margin: -10px 0 10px;
