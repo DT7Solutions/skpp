@@ -4,531 +4,500 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Time Line Layout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/custom.css"/>
   </head>
 
 <style>
-    @media (min-width: 1000px) {
-      #timeline .demo-card:nth-child(even) .head::after, #timeline .demo-card:nth-child(odd) .head::after {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-      }
-      #timeline .demo-card:nth-child(even) .head::before, #timeline .demo-card:nth-child(odd) .head::before {
-        position: absolute;
-        content: "";
-        width: 9px;
-        height: 9px;
-        background-color: #bdbdbd;
-        border-radius: 9px;
-        box-shadow: 0px 0px 2px 8px #f7f7f7;
-      }
-    }
-    /* Some Cool Stuff */
-    .demo-card:nth-child(1) {
-      order: 1;
-    }
-    .demo-card:nth-child(2) {
-      order: 4;
-    }
-    .demo-card:nth-child(3) {
-      order: 2;
-    }
-    .demo-card:nth-child(4) {
-      order: 5;
-    }
-    .demo-card:nth-child(5) {
-      order: 3;
-    }
-    .demo-card:nth-child(6) {
-      order: 6;
-    }
-    .demo-card:nth-child(7) {
-      order: 7;
-    }
-    .demo-card:nth-child(8) {
-      order: 8;
-    }
-    .demo-card:nth-child(9) {
-      order: 9;
-    }
-    .demo-card:nth-child(10) {
-      order: 10;
-    }
-    .demo-card:nth-child(11) {
-      order: 11;
-    }
-    .demo-card:nth-child(12) {
-      order: 12;
-    }
-    
-    #timeline {
-      padding: 100px 0;
-      background: #f7f7f7;
-      border-top: 1px solid rgba(191, 191, 191, 0.4);
-      border-bottom: 1px solid rgba(191, 191, 191, 0.4);
-    }
-    #timeline h1 {
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 200;
-      margin-bottom: 20px;
-    }
-    #timeline p.leader {
-      text-align: center;
-      max-width: 90%;
-      margin: auto;
-      margin-bottom: 45px;
-    }
-    #timeline .demo-card-wrapper {
-      position: relative;
-      margin: auto;
-    }
-    @media (min-width: 1000px) {
-      #timeline .demo-card-wrapper {
-        display: flex;
-        flex-flow: column wrap;
-        width: 1170px;
-        height: 2300px;
-        margin: 0 auto;
-      }
-    }
-    #timeline .demo-card-wrapper::after {
-      z-index: 1;
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      border-left: 1px solid rgba(191, 191, 191, 0.4);
-    }
-    @media (min-width: 1000px) {
-      #timeline .demo-card-wrapper::after {
-        border-left: 1px solid #bdbdbd;
-      }
-    }
-    #timeline .demo-card {
-      position: relative;
-      display: block;
-      margin: 2.5% auto 7.5%;
-      max-width: 95%;
-      z-index: 2;
-      border-radius: 12px;
-    }
-    @media (min-width: 480px) {
-      #timeline .demo-card {
-        max-width: 60%;
-        box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
-      }
-    }
-    @media (min-width: 720px) {
-      #timeline .demo-card {
-        max-width: 40%;
-      }
-    }
-    @media (min-width: 1000px) {
-      #timeline .demo-card {
-        max-width: 450px;
-        height: 250px;
-        margin: 7.5%;
-        margin-top: 2.5%;
-        margin-bottom: 15%;
-      }
-      #timeline .demo-card:nth-child(odd) {
-        margin-right: 45px;
-        margin-top: 0%;
-      }
-      #timeline .demo-card:nth-child(odd) .head::after {
-        border-left-width: 15px;
-        border-left-style: solid;
-        left: 100%;
-      }
-      #timeline .demo-card:nth-child(odd) .head::before {
-        left: 491.5px;
-      }
-      #timeline .demo-card:nth-child(even) {
-        margin-left: 45px;
-        margin-top: 15%;
-      }
-      #timeline .demo-card:nth-child(even) .head::after {
-        border-right-width: 15px;
-        border-right-style: solid;
-        right: 100%;
-      }
-      #timeline .demo-card:nth-child(even) .head::before {
-        right: 489.5px;
-      }
-      #timeline .demo-card:nth-child(2) {
-        margin-top: 15%;
-      }
-    }
-    #timeline .demo-card .head {
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      font-weight: 400;
-    }
-    #timeline .demo-card .head .number-box {
-      display: inline;
-      float: left;
-      border-radius: 8px;
-      margin: 2.5%;
-      padding: 2.5%;
-      font-size: 36px;
-      line-height: 40px;
-      font-weight: 600;
-      background: rgba(0, 0, 0, 0.17);
-      text-transform: uppercase;
-    }
-    #timeline .demo-card .head .info {
-        width: 75%;
-    }    
-    #timeline .demo-card .head h2 {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      font-weight: inherit;
-      letter-spacing: 1.25px;
-      margin: 0;
-      line-height: 2rem;
-    }
-    #timeline .demo-card .head .sub {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #timeline .demo-card .head .sub .small {
-        font-size: 0.8rem;
-        letter-spacing: 1.25px;
-        line-height: 1.2rem;
-        margin: 1%;
-        text-transform: capitalize;
-    }
-    #timeline .demo-card .head .sub .duriation {
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-    }
-    @media (min-width: 480px) {
-      #timeline .demo-card .head h2 {
-        font-size: 125%;
-        line-height: 1.5rem;
-        font-weight: 700;
-      }
-    }
-    #timeline .demo-card .head h2 span {
-      display: block;
-      font-size: 0.6rem;
-    }
-    @media (min-width: 480px) {
-      #timeline .demo-card .head h2 span {
-        font-size: 0.8rem;
-      }
-    }
-    #timeline .demo-card .body {
-        background: #fff;
-        border: 1px solid rgba(191, 191, 191, 0.4);
-        border-top: 0;
-        padding: 2.5%;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        display:flex;
-        justify-content:center;
-        align-items: center;
-    }
-    #timeline .demo-card .body img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-    }
-    @media (min-width: 1000px) {
-      #timeline .demo-card .body {
-        min-height: 200px;
-        max-height: 250px;
-      }
-    }
-    #timeline .demo-card .body p {
-      font-size: 14px;
-      line-height: 16px;
-      margin: 2.5% 5% 5% 2.5%;
-      text-align: justify;
-    }
-    #timeline .demo-card--step1 {
-      background-color: #2E3192;
-    }
-    #timeline .demo-card--step1 .head::after {
-      border-color: #2E3192;
-    }
-    #timeline .demo-card--step2 {
-      background-color: #4B489D;
-    }
-    #timeline .demo-card--step2 .head::after {
-      border-color: #4B489D;
-    }
-    #timeline .demo-card--step3 {
-      background-color: #CF152D;
-    }
-    #timeline .demo-card--step3 .head::after {
-      border-color: #CF152D;
-    }
-    #timeline .demo-card--step4 {
-      background-color: #F0B406;
-    }
-    #timeline .demo-card--step4 .head::after {
-      border-color: #F0B406;
-    }
-    #timeline .demo-card--step5 {
-      background-color: #4FBA51;
-    }
-    #timeline .demo-card--step5 .head::after {
-      border-color: #4FBA51;
-    }
-    #timeline .demo-card--step6 {
-      background-color: #304A72;
-    }
-    #timeline .demo-card--step6 .head::after {
-      border-color: #304A72;
-    }
-    #timeline .demo-card--step7 {
-      background-color: #CF152D;
-    }
-    #timeline .demo-card--step7 .head::after {
-      border-color: #CF152D;
-    }
-    #timeline .demo-card--step8 {
-      background-color: #A34090;
-    }
-    #timeline .demo-card--step8 .head::after {
-      border-color: #A34090;
-    }
-    #timeline .demo-card--step9 {
-      background-color: #115990;
-    }
-    #timeline .demo-card--step9 .head::after {
-      border-color: #115990;
-    }
-     
+  #timeline .demo-card-wrapper {
+    position: relative;
+    margin: auto;
+  }
+  #timeline .demo-card-wrapper::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid rgba(191, 191, 191, 0.4);
+  }
+  #timeline .demo-card {
+    position: relative;
+    display: block;
+    margin: 2.5% auto 7.5%;
+    max-width: 100%;
+    z-index: 2;
+    border-radius: 12px;
+  }
+  #timeline .demo-card .head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 400;
+  }
+  #timeline .demo-card .head .number-box {
+    display: inline;
+    float: left;
+    border-radius: 8px;
+    margin: 2.5%;
+    padding: 2.5%;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.17);
+    text-transform: uppercase;
+  }
+  #timeline .demo-card .head .info {
+    width: 75%;
+  }    
+  #timeline .demo-card .head h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: inherit;
+    letter-spacing: 1.25px;
+    margin: 0;
+    line-height: 2rem;
+  }
+  #timeline .demo-card .head .sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #timeline .demo-card .head .sub .small {
+    font-size: 0.8rem;
+    letter-spacing: 1.25px;
+    line-height: 1.2rem;
+    margin: 1%;
+    text-transform: capitalize;
+  }
+  #timeline .demo-card .head .sub .duriation {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  #timeline .demo-card .head h2 span {
+    display: block;
+    font-size: 0.6rem;
+  }
+  #timeline .demo-card .body {
+    background: #fff;
+    border: 1px solid rgba(191, 191, 191, 0.4);
+    border-top: 0;
+    padding: 2.5%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #timeline .demo-card .body img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  #timeline .demo-card .body p {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 2.5% 5% 5% 2.5%;
+    text-align: justify;
+  }
+  #timeline .demo-card--step1 {
+    background-color: #2E3192;
+  }
+  #timeline .demo-card--step1 .head::after {
+    border-color: #2E3192;
+  }
+  #timeline .demo-card--step2 {
+    background-color: #4B489D;
+  }
+  #timeline .demo-card--step2 .head::after {
+    border-color: #4B489D;
+  }
+  #timeline .demo-card--step3 {
+    background-color: #CF152D;
+  }
+  #timeline .demo-card--step3 .head::after {
+    border-color: #CF152D;
+  }
+  #timeline .demo-card--step4 {
+    background-color: #F0B406;
+  }
+  #timeline .demo-card--step4 .head::after {
+    border-color: #F0B406;
+  }
+  #timeline .demo-card--step5 {
+    background-color: #4FBA51;
+  }
+  #timeline .demo-card--step5 .head::after {
+    border-color: #4FBA51;
+  }
+  #timeline .demo-card--step6 {
+    background-color: #304A72;
+  }
+  #timeline .demo-card--step6 .head::after {
+    border-color: #304A72;
+  }
+  #timeline .demo-card--step7 {
+    background-color: #CF152D;
+  }
+  #timeline .demo-card--step7 .head::after {
+    border-color: #CF152D;
+  }
+  #timeline .demo-card--step8 {
+    background-color: #A34090;
+  }
+  #timeline .demo-card--step8 .head::after {
+    border-color: #A34090;
+  }
+  #timeline .demo-card--step9 {
+    background-color: #115990;
+  }
+  #timeline .demo-card--step9 .head::after {
+    border-color: #115990;
+  }
+
+  @media (min-width: 1000px) {
+  #timeline .demo-card:nth-child(even) .head::after, 
+  #timeline .demo-card:nth-child(odd) .head::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  #timeline .demo-card:nth-child(even) .head::before, 
+  #timeline .demo-card:nth-child(odd) .head::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #bdbdbd;
+    border-radius: 9px;
+    box-shadow: 0px 0px 2px 8px #f7f7f7;
+  }
+  #timeline .demo-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    margin: 5% auto;
+  }
+  #timeline .demo-card-wrapper::after {
+    border-left: 1px solid #bdbdbd;
+    height: 105%;
+  }
+  #timeline .demo-card {
+    max-width: 425px !important;
+    height: 250px;
+    margin: 7.5%;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+  }
+  #timeline .demo-card:nth-child(odd) {
+    margin-right: 2.5%;
+    right: 50%;
+    left: 2%;
+    margin-top: 0%;
+    margin-bottom: -5%;
+  }
+  #timeline .demo-card:nth-child(3),
+  #timeline .demo-card:nth-child(5),
+  #timeline .demo-card:nth-child(7),
+  #timeline .demo-card:nth-child(9) {
+    margin-top: -10%;
+    margin-bottom: -2.5%;
+  }
+  #timeline .demo-card:nth-child(odd) .head::after {
+    border-left-width: 15px;
+    border-left-style: solid;
+    left: 100%;
+  }
+  #timeline .demo-card:nth-child(odd) .head::before {
+    left: 105%;
+  }
+  #timeline .demo-card:nth-child(even) {
+    margin-left: 2.5%;
+    left: 50%;
+    right: 0%;
+    margin-top: -2.5%;
+    margin-bottom: 2.5%;
+  }
+  #timeline .demo-card:nth-child(2),
+  #timeline .demo-card:nth-child(4),
+  #timeline .demo-card:nth-child(6),
+  #timeline .demo-card:nth-child(8),
+  #timeline .demo-card:nth-child(10) {
+    margin-top: 0%;
+    margin-bottom: 5%;
+  }
+  #timeline .demo-card:nth-child(even) .head::after {
+    border-right-width: 15px;
+    border-right-style: solid;
+    right: 100%;
+  }
+  #timeline .demo-card:nth-child(even) .head::before {
+    right: 105%;
+  }
+  #timeline .demo-card .body {
+    min-height: 250px;
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 720px) {
+  #timeline .demo-card {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 480px) {
+  #timeline .demo-card {
+    max-width: 60%;
+    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+  }
+  #timeline .demo-card .head h2 {
+    font-size: 125%;
+    line-height: 1.5rem;
+    font-weight: 700;
+  }
+  #timeline .demo-card .head h2 span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 720px) {
+  #timeline .demo-card {
+    max-width: 90%;
+  }
+  #timeline .demo-card .body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #timeline .demo-card .body img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
 </style>
 
   <body>
         
-    <section id=timeline>
-        <h1>Timeline</h1>
-        <p class="leader">All cards must be the same height and width for space calculations on large screens.</p>
-        <div class="demo-card-wrapper">
-            <div class="demo-card demo-card--step1">
+    <section class="section journey" id="journey">
+      <div class="container" id="timeline">
+        <h2 class="title text-capitalize mb-4 text-white">A Chronicle of Business Ventures <br> and Organizational Impact</h2>
+        <p class="pera-title para-desc-600 text-light-muted mb-4 mx-auto">
+            Explore the key experiences and achievements that have shaped my career across diverse businesses and organizations.
+        </p>
+          <div class="demo-card-wrapper">
+              <div class="demo-card demo-card--step1">
+                  <div class="head">
+                      <div class="number-box">
+                          <span>01</span>
+                      </div>
+                      <div class="info">
+                          <h2>Tandava Krishna Agencies</h2>
+                          <div class="sub">
+                              <span class="small">Proprietor</span> <span class="duriation">1994 - Present</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="body">
+                      <p>
+                          Established more than 3 decades ago in Vijayawada in the 1990’s, <strong>Tandava Krishna Agencies</strong> 
+                          is a leading & premier provider of PVC pipes, tiles, sanitaryware, and 
+                          construction materials, offering renowned brands such as Prince, ashirwad, astral, finolex, cera, etc.
+                      </p>
+                      <img class="img-fluid" src="images/journey/sekharspeaks-tanda-krishna-agencis-100x100.png" alt="sekharspeaks Tandava Krishna Agencies journey-image" title="Tandava Krishna Agencies">
+                  </div>
+              </div>
+              <div class="demo-card demo-card--step2">
                 <div class="head">
                     <div class="number-box">
-                        <span>01</span>
+                        <span>02</span>
                     </div>
                     <div class="info">
-                        <h2>Tandava Krishna Agencies</h2>
+                        <h2>Vijayawada Chamber of Commerce - VCCI</h2>
                         <div class="sub">
-                            <span class="small">Proprietor</span> <span class="duriation">1994 - Present</span>
+                            <span class="small">Exicutive Member</span> <span class="duriation">2016- Present</span>
                         </div>
                     </div>
                 </div>
                 <div class="body">
                     <p>
-                        Established more than 3 decades ago in Vijayawada in the 1990’s, <strong>Tandava Krishna Agencies</strong> 
-                        is a leading & premier provider of PVC pipes, tiles, sanitaryware, and 
-                        construction materials, offering renowned brands such as Prince, ashirwad, astral, finolex, cera, etc.
+                        The <strong>Vijayawada Chamber of Commerce and Industry (VCCI)</strong>, established in 1955, has empowered the traders of 
+                        Krishna District and Vijayawada to think globally and act locally. With an active membership of over 2600 traders and 
+                        industrialists and 112 affiliated associations, VCCI has become a pivotal voice for businesses across the country. 
+                        Located in the heart of Vijayawada, VCCI serves as a meeting place for business leaders and continues to guide the 
+                        trade community through challenges and opportunities. VCCI is gearing up to celebrate its diamond jubilee, marking 
+                        over six decades of impactful service.
                     </p>
-                    <img class="img-fluid" src="images/journey/sekharspeaks-tanda-krishna-agencis-100x100.png" alt="sekharspeaks Tandava Krishna Agencies journey-image" title="Tandava Krishna Agencies">
+                    <img class="img-fluid" src="images/journey/sekharspeaks-vijayawada-chamber-of-commerce-100x100.png" alt="VCCI" title="Vijayawada Chamber of Commerce & Industry">
                 </div>
-            </div>
-
-            <div class="demo-card demo-card--step2">
-              <div class="head">
-                  <div class="number-box">
-                      <span>02</span>
-                  </div>
-                  <div class="info">
-                      <h2>Vijayawada Chamber of Commerce - VCCI</h2>
-                      <div class="sub">
-                          <span class="small">Exicutive Member</span> <span class="duriation">2016- Present</span>
+              </div>
+              <div class="demo-card demo-card--step3">
+                  <div class="head">
+                      <div class="number-box">
+                          <span>03</span>
+                      </div>
+                      <div class="info">
+                          <h2>BNI Vijayawada</h2>
+                          <div class="sub">
+                              <span class="small">Member</span> <span class="duriation">2016 - 2022</span>
+                          </div>
                       </div>
                   </div>
+                  <div class="body">
+                      <p>
+                          As the first Senior Director Consultant of <strong>BNI Vijayawada</strong>, I had the privilege of launching two world record chapters – the 
+                          first women’s chapter and the first millennial chapter globally. With a passion for breaking barriers and setting new 
+                          milestones, I am also the first regional language trainer in India for BNI, empowering professionals to succeed in their 
+                          native language. My journey was driven by a commitment to innovation, inclusion, and impactful leadership.
+                      </p>
+                      <img class="img-fluid" src="images/journey/sekharspeaks-BNI-vijayawada-100x100.png" alt="sekharspeaks BNI Vijayawada journey-image" title="BNI Vijayawada">
+                  </div>
               </div>
-              <div class="body">
-                  <p>
-                      The <strong>Vijayawada Chamber of Commerce and Industry (VCCI)</strong>, established in 1955, has empowered the traders of 
-                      Krishna District and Vijayawada to think globally and act locally. With an active membership of over 2600 traders and 
-                      industrialists and 112 affiliated associations, VCCI has become a pivotal voice for businesses across the country. 
-                      Located in the heart of Vijayawada, VCCI serves as a meeting place for business leaders and continues to guide the 
-                      trade community through challenges and opportunities. VCCI is gearing up to celebrate its diamond jubilee, marking 
-                      over six decades of impactful service.
-                  </p>
-                  <img class="img-fluid" src="images/journey/sekharspeaks-vijayawada-chamber-of-commerce-100x100.png" alt="VCCI" title="Vijayawada Chamber of Commerce & Industry">
-              </div>
-            </div>
-    
-            <div class="demo-card demo-card--step3">
+              <div class="demo-card demo-card--step4">
                 <div class="head">
                     <div class="number-box">
-                        <span>03</span>
+                        <span>04</span>
                     </div>
                     <div class="info">
-                        <h2>BNI Vijayawada</h2>
+                        <h2>Rotary Midtown Vijayawada</h2>
                         <div class="sub">
-                            <span class="small">Member</span> <span class="duriation">2016 - 2022</span>
+                            <span class="small">Former Vice President</span> <span class="duriation">2017 - Present</span>
                         </div>
                     </div>
                 </div>
                 <div class="body">
                     <p>
-                        As the first Senior Director Consultant of <strong>BNI Vijayawada</strong>, I had the privilege of launching two world record chapters – the 
-                        first women’s chapter and the first millennial chapter globally. With a passion for breaking barriers and setting new 
-                        milestones, I am also the first regional language trainer in India for BNI, empowering professionals to succeed in their 
-                        native language. My journey was driven by a commitment to innovation, inclusion, and impactful leadership.
+                        The <strong>Rotary Midtown Vijayawada</strong> Midtown, a distinguished member of Rotary International, is 
+                        committed to a wide range of humanitarian initiatives including health camps, education, and environmental 
+                        sustainability. With a mission to make a meaningful impact both locally and globally, this club stands out 
+                        as the largest Rotary chapter in the world, boasting over 1,000 dedicated members.
                     </p>
-                    <img class="img-fluid" src="images/journey/sekharspeaks-BNI-vijayawada-100x100.png" alt="sekharspeaks BNI Vijayawada journey-image" title="BNI Vijayawada">
+                    <img class="img-fluid" src="images/journey/sekharspeaks-rotary-midtown-vijayawada-100x100.png" alt="sekharspeaks Rotary MidTown Vijayawada journey-image" title="Rotary Midtown Vijayawada">
                 </div>
-            </div>
-    
-            <div class="demo-card demo-card--step4">
-              <div class="head">
-                  <div class="number-box">
-                      <span>04</span>
-                  </div>
-                  <div class="info">
-                      <h2>Rotary Midtown Vijayawada</h2>
-                      <div class="sub">
-                          <span class="small">Former Vice President</span> <span class="duriation">2017 - Present</span>
-                      </div>
-                  </div>
               </div>
-              <div class="body">
-                  <p>
-                      The <strong>Rotary Midtown Vijayawada</strong> Midtown, a distinguished member of Rotary International, is 
-                      committed to a wide range of humanitarian initiatives including health camps, education, and environmental 
-                      sustainability. With a mission to make a meaningful impact both locally and globally, this club stands out 
-                      as the largest Rotary chapter in the world, boasting over 1,000 dedicated members.
-                  </p>
-                  <img class="img-fluid" src="images/journey/sekharspeaks-rotary-midtown-vijayawada-100x100.png" alt="sekharspeaks Rotary MidTown Vijayawada journey-image" title="Rotary Midtown Vijayawada">
-              </div>
-            </div>
-
-            <div class="demo-card demo-card--step5">
-              <div class="head">
-                  <div class="number-box">
-                      <span>05</span>
-                  </div>
-                  <div class="info">
-                      <h2>Sarayu Eco Solutions</h2>
-                      <div class="sub">
-                          <span class="small">Designated Partner</span> <span class="duriation">2020 - Present</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="body">
-                  <p>
-                      Based in Vijayawada, <strong>Sarayu Eco Solutions</strong> LLP, established in January, 2020, offers cutting-edge services in 
-                      the Solor Industry. Like Solor Power, Solar Power, Solar Water Heaters, Solar Street Lights, Solar Fencing, Solar Products,
-                      Related Accessories Etc. We are dedicated to pioneering sustainable solutions in energy and 
-                      water management while championing community development and environmental responsibility.
-                  </p>
-                  <img class="img-fluid" src="images/journey/sekharspeaks-sarayu-eco-solutions-100x100.png" alt="sekharspeaks Sarayu Eco Solutions journey-image" title="Sarayu Eco Solutions">
-              </div>
-            </div>
-
-            <div class="demo-card demo-card--step6">
-              <div class="head">
-                  <div class="number-box">
-                      <span>06</span>
-                  </div>
-                  <div class="info">
-                      <h2>Sikhara Nirmaan</h2>
-                      <div class="sub">
-                          <span class="small">Chairman & Managing Director</span> <span class="duriation">2021 - Present</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="body">
-                  <p>
-                      <strong>Sikhara Infra Nirman</strong> Private Limited, operating under the esteemed brand 'Sikhara NIRMAAN,' is a premier provider 
-                      of building and construction materials and services, with experience over 30+ years, based in Vijayawada. We revolutionize the 
-                      way branded construction products reach customers in semi-urban and rural areas, offering homeowners direct access to high-quality 
-                      materials, expert knowledge, and comprehensive services, including financing options.
-                  </p>
-                  <img class="img-fluid" src="images/journey/sekharspeaks-sikhara-nirmaan-100x100.png" alt="sekharspeaks Sikhara Nirmaan journey-image" title="Sikhara Nirmaan">
-              </div>
-            </div>
-
-            <div class="demo-card demo-card--step7">
+              <div class="demo-card demo-card--step5">
                 <div class="head">
                     <div class="number-box">
-                        <span>07</span>
+                        <span>05</span>
                     </div>
                     <div class="info">
-                        <h2>BNI Guntur</h2>
+                        <h2>Sarayu Eco Solutions</h2>
                         <div class="sub">
-                            <span class="small">Exicutive Director</span> <span class="duriation">2022 - Present</span>
+                            <span class="small">Designated Partner</span> <span class="duriation">2020 - Present</span>
                         </div>
                     </div>
                 </div>
                 <div class="body">
                     <p>
-                        In 2022, I took over the region of Guntur as Executive Director, and through dedicated collaboration with BNI members, 
-                        we transformed the region’s world ranking from 719 to 62. Over the past two years, I’ve worked closely with members, 
-                        fostering connections that have enabled them to expand their businesses globally. It has been a truly rewarding 
-                        experience to see how, together, we’ve made such a meaningful impact.
+                        Based in Vijayawada, <strong>Sarayu Eco Solutions</strong> LLP, established in January, 2020, offers cutting-edge services in 
+                        the Solor Industry. Like Solor Power, Solar Power, Solar Water Heaters, Solar Street Lights, Solar Fencing, Solar Products,
+                        Related Accessories Etc. We are dedicated to pioneering sustainable solutions in energy and 
+                        water management while championing community development and environmental responsibility.
                     </p>
-                    <img class="img-fluid" src="images/journey/sekharspeaks-BNI-guntur-100x100.png" alt="sekharspeaks BNI Guntur journey-image" title="BNI Guntur">
+                    <img class="img-fluid" src="images/journey/sekharspeaks-sarayu-eco-solutions-100x100.png" alt="sekharspeaks Sarayu Eco Solutions journey-image" title="Sarayu Eco Solutions">
                 </div>
-            </div>
-
-            <div class="demo-card demo-card--step8">
-              <div class="head">
-                  <div class="number-box">
-                      <span>08</span>
-                  </div>
-                  <div class="info">
-                      <h2>Sikhara Wealth Saviors</h2>
-                      <div class="sub">
-                          <span class="small">Partner</span> <span class="duriation">2023 - Present</span>
-                      </div>
-                  </div>
               </div>
-              <div class="body">
-                  <p>
-                      <strong>Sikhara Wealth Saviors</strong> excels in delivering top-tier wealth management and financial 
-                      planning services. We offer tailored advice to individuals and businesses, focusing on retirement planning, 
-                      growth strategies, and preserving wealth across generations.
-                  </p>
-                  <img class="img-fluid" src="images/journey/sekharspeaks-sikhara-wealth-saviors-100x100.png" alt="sekharspeaks Sikhara Wealth Saviors journey-image" title="Sikhara Wealth Saviors">
-              </div>
-            </div>
-    
-            <div class="demo-card demo-card--step9">
+              <div class="demo-card demo-card--step6">
                 <div class="head">
                     <div class="number-box">
-                        <span>09</span>
+                        <span>06</span>
                     </div>
                     <div class="info">
-                        <h2>Action Coach</h2>
+                        <h2>Sikhara Nirmaan</h2>
                         <div class="sub">
-                            <span class="small">Certified Coach</span> <span class="duriation">2023 - Present</span>
+                            <span class="small">Chairman & Managing Director</span> <span class="duriation">2021 - Present</span>
                         </div>
                     </div>
                 </div>
                 <div class="body">
                     <p>
-                        Founded by Brad Sugars in 1993, <strong>Action COACH</strong> has emerged as a top-tier business coaching 
-                        franchise, celebrated for its innovation and leadership in the field. For over thirty years, it has set 
-                        unparalleled standards in business coaching excellence. With more than 100 coaches across India, 
-                        <em>Action COACH</em> continues to drive transformative success and growth.
+                        <strong>Sikhara Infra Nirman</strong> Private Limited, operating under the esteemed brand 'Sikhara NIRMAAN,' is a premier provider 
+                        of building and construction materials and services, with experience over 30+ years, based in Vijayawada. We revolutionize the 
+                        way branded construction products reach customers in semi-urban and rural areas, offering homeowners direct access to high-quality 
+                        materials, expert knowledge, and comprehensive services, including financing options.
                     </p>
-                    <img class="img-fluid" src="images/journey/sekharspeaks-action-coach-100x100.png" alt="sekharspeaks Action Coach journey-image" title="Action Coach">
+                    <img class="img-fluid" src="images/journey/sekharspeaks-sikhara-nirmaan-100x100.png" alt="sekharspeaks Sikhara Nirmaan journey-image" title="Sikhara Nirmaan">
                 </div>
-            </div>
-        </div>
+              </div>
+              <div class="demo-card demo-card--step7">
+                  <div class="head">
+                      <div class="number-box">
+                          <span>07</span>
+                      </div>
+                      <div class="info">
+                          <h2>BNI Guntur</h2>
+                          <div class="sub">
+                              <span class="small">Exicutive Director</span> <span class="duriation">2022 - Present</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="body">
+                      <p>
+                          In 2022, I took over the region of Guntur as Executive Director, and through dedicated collaboration with BNI members, 
+                          we transformed the region’s world ranking from 719 to 62. Over the past two years, I’ve worked closely with members, 
+                          fostering connections that have enabled them to expand their businesses globally. It has been a truly rewarding 
+                          experience to see how, together, we’ve made such a meaningful impact.
+                      </p>
+                      <img class="img-fluid" src="images/journey/sekharspeaks-BNI-guntur-100x100.png" alt="sekharspeaks BNI Guntur journey-image" title="BNI Guntur">
+                  </div>
+              </div>
+              <div class="demo-card demo-card--step8">
+                <div class="head">
+                    <div class="number-box">
+                        <span>08</span>
+                    </div>
+                    <div class="info">
+                        <h2>Sikhara Wealth Saviors</h2>
+                        <div class="sub">
+                            <span class="small">Partner</span> <span class="duriation">2023 - Present</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <p>
+                        <strong>Sikhara Wealth Saviors</strong> excels in delivering top-tier wealth management and financial 
+                        planning services. We offer tailored advice to individuals and businesses, focusing on retirement planning, 
+                        growth strategies, and preserving wealth across generations.
+                    </p>
+                    <img class="img-fluid" src="images/journey/sekharspeaks-sikhara-wealth-saviors-100x100.png" alt="sekharspeaks Sikhara Wealth Saviors journey-image" title="Sikhara Wealth Saviors">
+                </div>
+              </div>
+              <div class="demo-card demo-card--step9">
+                  <div class="head">
+                      <div class="number-box">
+                          <span>09</span>
+                      </div>
+                      <div class="info">
+                          <h2>Action Coach</h2>
+                          <div class="sub">
+                              <span class="small">Certified Coach</span> <span class="duriation">2023 - Present</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="body">
+                      <p>
+                          Founded by Brad Sugars in 1993, <strong>Action COACH</strong> has emerged as a top-tier business coaching 
+                          franchise, celebrated for its innovation and leadership in the field. For over thirty years, it has set 
+                          unparalleled standards in business coaching excellence. With more than 100 coaches across India, 
+                          <em>Action COACH</em> continues to drive transformative success and growth.
+                      </p>
+                      <img class="img-fluid" src="images/journey/sekharspeaks-action-coach-100x100.png" alt="sekharspeaks Action Coach journey-image" title="Action Coach">
+                  </div>
+              </div>
+          </div>
+      </div>
     </section>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
