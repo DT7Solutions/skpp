@@ -104,6 +104,7 @@ h1, h2, h3, h4, h5, h6, p,
 }
 .navbar-custom .navigation .nav-item .nav-link,
 .nav-sticky.navbar-custom .navigation .nav-item .nav-link {
+  font-size: 14px !important;
   color: var(--white-color);
 }
 .navbar {
@@ -825,6 +826,7 @@ textarea::placeholder {
   .contact-box {
     max-height: 650px;
     min-height: 600px;
+    max-width: 95%;
   }
   .timeline-content .margin-50 {
     margin-right: 3.5%;
@@ -836,6 +838,9 @@ textarea::placeholder {
 @media screen and (max-width: 768px) {
   #about{
     padding-top: 10%;
+  }
+  .wrapper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 567px) {
@@ -889,7 +894,7 @@ textarea::placeholder {
     width: 100%;
   }
   .timeline-content .margin-50 {
-    margin-right: 11.5%;
+    margin-right: 9.5%;
   }
   .timeline-content .margin-neg-50 {
     margin-right: 8.5%;
