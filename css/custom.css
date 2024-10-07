@@ -219,13 +219,14 @@ h1, h2, h3, h4, h5, h6, p,
 }
 .services .feature-widget {
   min-height: 300px;
-  max-width: 500px;
+  max-width: 100%;
   padding: 2.5% 5% 5%;
+  margin: 5% 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 6px !important;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .services .feature-widget .services-icon img{
   max-width: 200px;
@@ -236,6 +237,14 @@ h1, h2, h3, h4, h5, h6, p,
 }
 .services-texts p {
   color: var(--text-color);
+}
+.services-texts a {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 2.5%;
 }
 .services-texts .text-primary {
   border: 1px solid #007BFF;
@@ -704,9 +713,12 @@ textarea::placeholder {
   color: var(--text-color);
 }
 .copyright-area p a{
-  color: var(--white-color);
+  color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
+}
+.copyright-area p a:hover{
+  color: var(--white-color);
 }
 @media (min-width: 1920px) and (max-width:3200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -751,6 +763,9 @@ textarea::placeholder {
   }
   .contact-detail {
     min-height: 275px;
+  }
+  .services .feature-widget {
+    min-height: 400px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
