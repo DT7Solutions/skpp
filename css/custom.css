@@ -130,11 +130,14 @@ h1, h2, h3, h4, h5, h6, p,
   color: var(--white-color);
   border-bottom: 2px solid var(--white-color);
 }
+.navbar-custom .navigation .nav-item .nav-link:hover, 
+.navbar-custom .navigation .nav-item .nav-link:focus {
+  color: var(--primary-color) !important;
+}
 .nav-sticky.navbar-custom .navigation .nav-item .nav-link:hover, 
 .nav-sticky.navbar-custom .navigation .nav-item .nav-link:active, 
 .nav-sticky.navbar-custom .navigation .nav-item .nav-link:focus {
   color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
 }
 .navbar-custom .navigation .nav-item.custom-btn .nav-link{
   background-color: var(--secondary-color) !important;
