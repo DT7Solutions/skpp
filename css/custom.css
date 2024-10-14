@@ -860,7 +860,13 @@ textarea::placeholder {
   .navbar-custom {
     background-color: transparent !important;
   }
-  .nav-sticky {
+  .navbar-custom ul {
+    background: var(--background-color);
+    border-radius: 6px;
+    margin: 2.5%;
+  }
+  .nav-sticky,
+  .nav-sticky ul {
     background: var(--secondary-color) !important;
   }
   .navbar-custom .navbar-toggler,
