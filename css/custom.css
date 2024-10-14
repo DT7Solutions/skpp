@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6, p,
 .back-to-top {
   z-index: 99;
   position: fixed;
-  bottom: 5%;
+  bottom: 7.5%;
   right: 2.5%;
   transform: rotate(45deg);
   border-radius: 6px;
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6, p,
 .question {
   font-size: 16px;
   font-weight: 500;
-  padding: 2.5% 5%;
+  padding: 2.5% 7.5% 2.5% 5%;
   position: relative;
   display: flex;
   align-items: center;
@@ -609,7 +609,7 @@ h1, h2, h3, h4, h5, h6, p,
 .contact-detail {
   min-height: 250px;
   background: var(--primary-color);
-  padding: 10%;
+  padding: 12.5%;
   border-radius: 6px;
   margin-bottom: 7.5%;
 }
@@ -620,7 +620,7 @@ h1, h2, h3, h4, h5, h6, p,
   scale: 1.5;
 }
 .contact-box {
-  max-height: 600px;
+  max-height: 615px;
   background: var(--primary-color);
   padding: 5% 2.5%;
   border-radius: 6px;
@@ -645,8 +645,9 @@ textarea::placeholder {
 .error-msg {
   color: var(--error-color);
   font-size: 14px;
-  text-transform: capitalize;
-  margin-top: 1%;
+  text-transform: lowercase;
+  margin-top: 0.75%;
+  margin-left: 2.5%;
 }
 .alert {
   padding: 2.5%;
@@ -750,13 +751,13 @@ textarea::placeholder {
 .copyright-area{
   background: var(--secondary-color);
   padding: 0.5% 0% 1%;
-  margin: 1% 0% 0%;
+  margin: 2.5% 0% 0%;
 }
 .copyright-area p ,
 .copyright-text p {
   margin: 0;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--white-color);
 }
 .copyright-area p a{
   color: var(--white-color);
@@ -788,7 +789,7 @@ textarea::placeholder {
     min-height: 200px;
   }
   .contact-box {
-    max-height: 630px;
+    max-height: 680px;
   }
 }
 @media (min-width: 1540px) and (max-width: 1920px) {
@@ -802,6 +803,9 @@ textarea::placeholder {
   .contact-detail {
     min-height: 275px;
   }
+  .contact-box {
+    max-height: 625px;
+  }
 }
 @media (min-width: 1280px) and (max-width: 1540px) {
   .hero-area {
@@ -813,6 +817,9 @@ textarea::placeholder {
   .services .feature-widget {
     min-height: 400px;
   }
+  .contact-box {
+    max-height: 615px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
   .hero-area {
@@ -821,8 +828,11 @@ textarea::placeholder {
   .contact-detail {
     min-height: 265px;
   }
+  .contact-box {
+    max-height: 625px;
+  }
 }
-@media (min-width: 567px) and (max-width: 1920px) {
+@media (min-width: 767px) and (max-width: 1920px) {
   .main-timeline .timeline-content {
     padding: 20px 20px 20px 150px;
     border-radius: 0px 0px 0px 100px;
@@ -889,14 +899,28 @@ textarea::placeholder {
     min-height: 600px;
     max-width: 95%;
   }
+  .main-timeline .title {
+    margin-top: 1.5%;
+  }
   .timeline-content .margin-50 {
     margin-right: 3.5%;
+    margin-top: 1.5%;
   }
   .timeline-content .margin-neg-50 {
     margin-right: -7.5%;
+    margin-top: 1.5%;
   }
   .services .feature-widget {
     min-height: 500px;
+    margin: 5% 2.5%;
+  }
+  .modal-dialog {
+    max-width: 100%;
+  }
+  .copyright-area p ,
+  .copyright-text p ,
+  .copyright-area p a{
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -907,16 +931,50 @@ textarea::placeholder {
     width: 100%;
   }
 }
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .main-timeline {
+    margin-left:  -2.5%;
+  }
+  .main-timeline .timeline-content,
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 15px 20px 15px 120px;
+    border-radius: 6px;
+  }
+  .main-timeline .timeline-content {
+    padding: 40px 20px 15px 20px;
+    margin: 5% 0%;
+  }
+  .main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 40px 20px 15px 20px;
+    margin: 2.5% 0%;
+  }
+  .skill-badge {
+    position: absolute;
+    right: 55%;
+    top: 2.5%;
+    margin-right: 10%;
+  }
+  .main-timeline .timeline {
+    width: 100%;
+  }
+  .timeline-content .margin-50 {
+    margin-right: 20.5%;
+  }
+  .timeline-content .margin-neg-50 {
+    margin-right: 20.5%;
+  }
+}
 @media screen and (max-width: 567px) {
   #about{
     padding-top: 90%;
+    z-index: -99;
   }
   .hero-area {
     background-position: 70%;
     max-height: 450px;
   }
   .title-heading {
-    margin-top: 30% !important;
+    margin-top: 45% !important;
     padding-bottom: 0%;
   }
   .title-heading .heading {

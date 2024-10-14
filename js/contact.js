@@ -63,23 +63,23 @@ function validateForm() {
   var isValid = true;
 
   if (!name) {
-    showError("name-error", "Please enter a Name. *");
+    showError("name-error", " * Please enter a Name. *");
     isValid = false;
   }
   if (!phone) {
-    showError("phone-error", "Please enter a Phone Number. *");
+    showError("phone-error", " * Please enter a Phone Number. *");
     isValid = false;
   }
   if (!email) {
-    showError("email-error", "Please enter an Email. *");
+    showError("email-error", " * Please enter an Email. *");
     isValid = false;
   }
   if (!subject) {
-    showError("subject-error", "Please enter a Subject. *");
+    showError("subject-error", " * Please enter a Subject. *");
     isValid = false;
   }
   if (!message) {
-    showError("message-error", "Please enter a Message. *");
+    showError("message-error", " * Please enter a Message. *");
     isValid = false;
   }
 
