@@ -770,6 +770,51 @@ textarea::placeholder {
 .copyright-area p a:hover{
   color: var(--white-color);
 }
+
+
+/* Services Details Page */
+.banner {
+  background: url('../images/banner.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page-next-level .title {
+  font-size: 2.5rem;
+  color: var(--white-color) !important;
+}
+.breadcrumb .breadcrumb-item a {
+  color: var(--text-color);
+}
+.breadcrumb .breadcrumb-item a:hover {
+  color: var(--white-color);
+}
+.breadcrumb .breadcrumb-item.active {
+  color: var(--white-color);
+}
+.breadcrumb .breadcrumb-item:after {
+  content: "\f142";
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: 'Material Design Icons';
+  padding-left: 5px;
+}
+.work-details .title {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.work-details .services-details {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.work-details .services-details .items {
+  padding: 2.5%;
+}
+
+
 @media (min-width: 1920px) and (max-width:3200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1680px !important;
