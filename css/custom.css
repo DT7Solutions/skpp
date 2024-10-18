@@ -813,6 +813,10 @@ textarea::placeholder {
 .work-details .services-details .items {
   padding: 2.5%;
 }
+.container-filter li a:hover, .container-filter li a.active {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
 
 
 @media (min-width: 1920px) and (max-width:3200px) {

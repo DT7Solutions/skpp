@@ -1,15 +1,12 @@
+# robots.txt for https://sekharspeaks.com
+
 User-agent: *
-Disallow: /private/
 Disallow: /admin/
+Disallow: /assets/
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /styles/
 
-
-Allow: /$
-Allow: /#home$
-Allow: /#about$
-Allow: /#journey$
-Allow: /#portfolio$
-Allow: /#testimonial$
-Allow: /#contact$
-Allow: /sitemap.xml$
+Allow: /
 
 Sitemap: https://sekharspeaks.com/sitemap.xml
