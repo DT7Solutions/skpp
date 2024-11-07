@@ -45,7 +45,7 @@ function Send() {
     document.querySelectorAll('.contact-card').forEach(function(card) {
       card.style.display = 'none'; // Hide both success and error cards
     });
-  }, 50000); // 5 seconds timeout
+  }, 5000); // 5 seconds timeout
 
   return false;
 }
